@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "happyhorse": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@runapi.ai/happyhorse-mcp"
+      ],
+      "env": {
+        "RUNAPI_API_KEY": "${RUNAPI_API_KEY}"
+      }
+    }
+  }
+}

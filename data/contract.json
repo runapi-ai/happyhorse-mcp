@@ -1,0 +1,104 @@
+{
+  "catalog_models": [
+    "happyhorse-edit-video",
+    "happyhorse-image-to-video",
+    "happyhorse-character",
+    "happyhorse-text-to-video"
+  ],
+  "actions": {
+    "happyhorse/edit-video": {
+      "model": "HappyHorse",
+      "endpoint": "edit_video",
+      "models": [
+        "happyhorse-edit-video"
+      ],
+      "fields_by_model": {
+        "happyhorse-edit-video": {
+          "audio_setting": {
+            "enum": [
+              "auto",
+              "original"
+            ]
+          },
+          "source_video_url": {
+            "required": true
+          },
+          "output_resolution": {
+            "enum": [
+              "720p",
+              "1080p"
+            ]
+          },
+          "reference_image_urls": {}
+        }
+      }
+    },
+    "happyhorse/image-to-video": {
+      "model": "HappyHorse",
+      "endpoint": "image_to_video",
+      "models": [
+        "happyhorse-image-to-video"
+      ],
+      "fields_by_model": {
+        "happyhorse-image-to-video": {
+          "output_resolution": {
+            "enum": [
+              "720p",
+              "1080p"
+            ]
+          },
+          "first_frame_image_url": {
+            "required": true
+          }
+        }
+      }
+    },
+    "happyhorse/text-to-video": {
+      "model": "HappyHorse",
+      "endpoint": "text_to_video",
+      "models": [
+        "happyhorse-character",
+        "happyhorse-text-to-video"
+      ],
+      "fields_by_model": {
+        "happyhorse-character": {
+          "aspect_ratio": {
+            "enum": [
+              "16:9",
+              "9:16",
+              "1:1",
+              "4:3",
+              "3:4"
+            ]
+          },
+          "output_resolution": {
+            "enum": [
+              "720p",
+              "1080p"
+            ]
+          },
+          "reference_image_urls": {
+            "required": true
+          }
+        },
+        "happyhorse-text-to-video": {
+          "aspect_ratio": {
+            "enum": [
+              "16:9",
+              "9:16",
+              "1:1",
+              "4:3",
+              "3:4"
+            ]
+          },
+          "output_resolution": {
+            "enum": [
+              "720p",
+              "1080p"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

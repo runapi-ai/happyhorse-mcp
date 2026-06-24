@@ -1,0 +1,48 @@
+{
+  "endpoints": {
+    "happyhorse-edit-video/edit_video": {
+      "unit_price_cents": 48,
+      "billing_config": {
+        "key": "output_resolution",
+        "overrides": {
+          "720p": 28,
+          "1080p": 48
+        },
+        "duration_source": {
+          "kind": "response_body",
+          "path": "videos[0].url"
+        }
+      }
+    },
+    "happyhorse-image-to-video/image_to_video": {
+      "unit_price_cents": 48,
+      "billing_config": {
+        "key": "output_resolution",
+        "overrides": {
+          "720p": 28,
+          "1080p": 48
+        }
+      }
+    },
+    "happyhorse-character/text_to_video": {
+      "unit_price_cents": 48,
+      "billing_config": {
+        "key": "output_resolution",
+        "overrides": {
+          "720p": 28,
+          "1080p": 48
+        }
+      }
+    },
+    "happyhorse-text-to-video/text_to_video": {
+      "unit_price_cents": 48,
+      "billing_config": {
+        "key": "output_resolution",
+        "overrides": {
+          "720p": 28,
+          "1080p": 48
+        }
+      }
+    }
+  }
+}
