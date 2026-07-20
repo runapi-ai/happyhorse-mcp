@@ -9,46 +9,83 @@
     "happyhorse/edit-video": {
       "model": "HappyHorse",
       "endpoint": "edit_video",
+      "task_type": "asynchronous",
       "models": [
         "happyhorse-edit-video"
       ],
       "fields_by_model": {
         "happyhorse-edit-video": {
-          "audio_setting": {
-            "enum": [
-              "auto",
-              "original"
-            ]
+          "model": {
+            "type": "string"
+          },
+          "prompt": {
+            "type": "string"
           },
           "source_video_url": {
+            "type": "string",
             "required": true
           },
+          "reference_image_urls": {
+            "type": "array",
+            "max_items": 5
+          },
           "output_resolution": {
+            "type": "string",
             "enum": [
               "720p",
               "1080p"
             ]
           },
-          "reference_image_urls": {}
+          "audio_setting": {
+            "type": "string",
+            "enum": [
+              "auto",
+              "original"
+            ]
+          },
+          "seed": {
+            "type": "integer"
+          },
+          "callback_url": {
+            "type": "string"
+          }
         }
       }
     },
     "happyhorse/image-to-video": {
       "model": "HappyHorse",
       "endpoint": "image_to_video",
+      "task_type": "asynchronous",
       "models": [
         "happyhorse-image-to-video"
       ],
       "fields_by_model": {
         "happyhorse-image-to-video": {
+          "model": {
+            "type": "string"
+          },
+          "first_frame_image_url": {
+            "type": "string",
+            "required": true
+          },
+          "prompt": {
+            "type": "string"
+          },
           "output_resolution": {
+            "type": "string",
             "enum": [
               "720p",
               "1080p"
             ]
           },
-          "first_frame_image_url": {
-            "required": true
+          "duration_seconds": {
+            "type": "integer"
+          },
+          "seed": {
+            "type": "integer"
+          },
+          "callback_url": {
+            "type": "string"
           }
         }
       }
@@ -56,13 +93,34 @@
     "happyhorse/text-to-video": {
       "model": "HappyHorse",
       "endpoint": "text_to_video",
+      "task_type": "asynchronous",
       "models": [
         "happyhorse-character",
         "happyhorse-text-to-video"
       ],
       "fields_by_model": {
         "happyhorse-character": {
+          "model": {
+            "type": "string"
+          },
+          "prompt": {
+            "type": "string"
+          },
+          "reference_image_urls": {
+            "type": "array",
+            "required": true,
+            "max_items": 9,
+            "min_items": 1
+          },
+          "output_resolution": {
+            "type": "string",
+            "enum": [
+              "720p",
+              "1080p"
+            ]
+          },
           "aspect_ratio": {
+            "type": "string",
             "enum": [
               "16:9",
               "9:16",
@@ -71,18 +129,35 @@
               "3:4"
             ]
           },
-          "output_resolution": {
-            "enum": [
-              "720p",
-              "1080p"
-            ]
+          "duration_seconds": {
+            "type": "integer"
           },
-          "reference_image_urls": {
-            "required": true
+          "seed": {
+            "type": "integer"
+          },
+          "callback_url": {
+            "type": "string"
           }
         },
         "happyhorse-text-to-video": {
+          "model": {
+            "type": "string"
+          },
+          "prompt": {
+            "type": "string"
+          },
+          "reference_image_urls": {
+            "type": "array"
+          },
+          "output_resolution": {
+            "type": "string",
+            "enum": [
+              "720p",
+              "1080p"
+            ]
+          },
           "aspect_ratio": {
+            "type": "string",
             "enum": [
               "16:9",
               "9:16",
@@ -91,11 +166,14 @@
               "3:4"
             ]
           },
-          "output_resolution": {
-            "enum": [
-              "720p",
-              "1080p"
-            ]
+          "duration_seconds": {
+            "type": "integer"
+          },
+          "seed": {
+            "type": "integer"
+          },
+          "callback_url": {
+            "type": "string"
           }
         }
       }

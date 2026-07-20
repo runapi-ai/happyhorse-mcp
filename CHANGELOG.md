@@ -1,5 +1,11 @@
 # Changelog
 
+## [v0.1.7](https://github.com/runapi-ai/happyhorse-mcp/releases/tag/v0.1.7) - 2026-07-20
+
+### Fixed
+- Validate model-specific reference image collection limits from the generated contract.
+
+
 ## [v0.1.6](https://github.com/runapi-ai/happyhorse-mcp/releases/tag/v0.1.6) - 2026-07-08
 
 ### Fixed
