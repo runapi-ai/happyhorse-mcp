@@ -13,7 +13,7 @@
   <a href="https://github.com/runapi-ai/happyhorse-mcp"><img src="https://img.shields.io/badge/GitHub-runapi--ai%2Fhappyhorse--mcp-24292f?style=flat-square" alt="GitHub repository"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-blue?style=flat-square" alt="Apache-2.0 license"></a>
   <img src="https://img.shields.io/badge/Type-MCP_Server-blue?style=flat-square" alt="MCP Server">
-  <img src="https://img.shields.io/badge/Models-4-16a34a?style=flat-square" alt="4 models">
+  <img src="https://img.shields.io/badge/Models-7-16a34a?style=flat-square" alt="7 models">
 </p>
 
 <p align="center">
@@ -30,7 +30,7 @@
 ## Why This Package?
 
 `@runapi.ai/happyhorse-mcp` is a focused Model Context Protocol server for the **HappyHorse** model line on RunAPI.
-It gives MCP-compatible assistants direct access to 3 endpoints and 4 model variants without loading the full RunAPI catalog.
+It gives MCP-compatible assistants direct access to 3 endpoints and 7 model variants without loading the full RunAPI catalog.
 
 Use this per-model server when an agent should stay scoped to HappyHorse. Use [`@runapi.ai/mcp`](https://github.com/runapi-ai/mcp) when one assistant should discover every RunAPI model line.
 
@@ -74,23 +74,23 @@ Ready-made examples are in [`examples/`](examples/) for Claude, Cursor, Windsurf
 
 | Tool | Auth | Purpose |
 |---|---|---|
-| `edit_video` | Yes | Create a HappyHorse edit video task and optionally wait for a terminal status. Returns the task id, status, output URLs, and pricing snapshot. |
-| `image_to_video` | Yes | Create a HappyHorse image to video task and optionally wait for a terminal status. Returns the task id, status, output URLs, and pricing snapshot. |
-| `text_to_video` | Yes | Create a HappyHorse text to video task and optionally wait for a terminal status. Returns the task id, status, output URLs, and pricing snapshot. |
+| `edit_video` | Yes | Create a HappyHorse edit video task and optionally wait for a terminal status. Returns the task id, status, and output URLs. |
+| `image_to_video` | Yes | Create a HappyHorse image to video task and optionally wait for a terminal status. Returns the task id, status, and output URLs. |
+| `text_to_video` | Yes | Create a HappyHorse text to video task and optionally wait for a terminal status. Returns the task id, status, and output URLs. |
 | `get_task` | Yes | Fetch the current status and latest payload for an existing task. |
-| `check_pricing` | No | Look up the current pricing snapshot for a HappyHorse model and endpoint. |
+| `check_pricing` | No | Look up current pricing for a HappyHorse model and endpoint. |
 
 ---
 
 ## Models
 
-HappyHorse covers 4 model variants across 3 endpoints. Each tool accepts the models listed for it:
+HappyHorse covers 7 model variants across 3 endpoints. Each tool accepts the models listed for it:
 
 | Tool | Models |
 |---|---|
 | `edit_video` | `happyhorse-edit-video` |
-| `image_to_video` | `happyhorse-image-to-video` |
-| `text_to_video` | `happyhorse-character`, `happyhorse-text-to-video` |
+| `image_to_video` | `happyhorse-1.0-i2v`, `happyhorse-image-to-video` |
+| `text_to_video` | `happyhorse-1.0-r2v`, `happyhorse-1.0-t2v`, `happyhorse-character`, `happyhorse-text-to-video` |
 
 Model availability can change between releases. Use `check_pricing` or the [HappyHorse model page](https://runapi.ai/models/happyhorse) for the current catalog view.
 
