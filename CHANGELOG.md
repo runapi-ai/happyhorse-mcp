@@ -1,5 +1,14 @@
 # Changelog
 
+## [v0.2.0](https://github.com/runapi-ai/happyhorse-mcp/releases/tag/v0.2.0) - 2026-09-30
+
+### Changed
+- Send tool arguments to the service without local model, enum, range, required-field, or cross-field validation. Tool descriptions still list declared types and known values.
+  Migration: Invalid arguments now return the service's error, including its message, instead of a local tool-input rejection.
+- Document the 1080p output_resolution default on text_to_video, image_to_video, and edit_video, the 5-second duration_seconds default on text_to_video and image_to_video, and the auto audio_setting default on edit_video.
+- Depend on @runapi.ai/mcp-core 0.4.5 and send task creation and lookup to each tool's published route.
+
+
 ## [v0.1.8](https://github.com/runapi-ai/happyhorse-mcp/releases/tag/v0.1.8) - 2026-07-31
 
 ### Changed

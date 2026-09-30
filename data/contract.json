@@ -37,14 +37,16 @@
             "enum": [
               "720p",
               "1080p"
-            ]
+            ],
+            "default": "1080p"
           },
           "audio_setting": {
             "type": "string",
             "enum": [
               "auto",
               "original"
-            ]
+            ],
+            "default": "auto"
           },
           "seed": {
             "type": "integer"
@@ -80,10 +82,12 @@
             "enum": [
               "720p",
               "1080p"
-            ]
+            ],
+            "default": "1080p"
           },
           "duration_seconds": {
-            "type": "integer"
+            "type": "integer",
+            "default": 5
           },
           "seed": {
             "type": "integer"
@@ -108,10 +112,12 @@
             "enum": [
               "720p",
               "1080p"
-            ]
+            ],
+            "default": "1080p"
           },
           "duration_seconds": {
-            "type": "integer"
+            "type": "integer",
+            "default": 5
           },
           "seed": {
             "type": "integer"
@@ -151,7 +157,8 @@
             "enum": [
               "720p",
               "1080p"
-            ]
+            ],
+            "default": "1080p"
           },
           "aspect_ratio": {
             "type": "string",
@@ -164,7 +171,8 @@
             ]
           },
           "duration_seconds": {
-            "type": "integer"
+            "type": "integer",
+            "default": 5
           },
           "seed": {
             "type": "integer"
@@ -188,7 +196,8 @@
             "enum": [
               "720p",
               "1080p"
-            ]
+            ],
+            "default": "1080p"
           },
           "aspect_ratio": {
             "type": "string",
@@ -201,7 +210,8 @@
             ]
           },
           "duration_seconds": {
-            "type": "integer"
+            "type": "integer",
+            "default": 5
           },
           "seed": {
             "type": "integer"
@@ -228,7 +238,8 @@
             "enum": [
               "720p",
               "1080p"
-            ]
+            ],
+            "default": "1080p"
           },
           "aspect_ratio": {
             "type": "string",
@@ -241,7 +252,8 @@
             ]
           },
           "duration_seconds": {
-            "type": "integer"
+            "type": "integer",
+            "default": 5
           },
           "seed": {
             "type": "integer"
@@ -265,7 +277,8 @@
             "enum": [
               "720p",
               "1080p"
-            ]
+            ],
+            "default": "1080p"
           },
           "aspect_ratio": {
             "type": "string",
@@ -278,7 +291,8 @@
             ]
           },
           "duration_seconds": {
-            "type": "integer"
+            "type": "integer",
+            "default": 5
           },
           "seed": {
             "type": "integer"
