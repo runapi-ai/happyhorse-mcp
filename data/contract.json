@@ -168,7 +168,8 @@
               "1:1",
               "4:3",
               "3:4"
-            ]
+            ],
+            "default": "16:9"
           },
           "duration_seconds": {
             "type": "integer",
@@ -207,7 +208,8 @@
               "1:1",
               "4:3",
               "3:4"
-            ]
+            ],
+            "default": "16:9"
           },
           "duration_seconds": {
             "type": "integer",
@@ -249,7 +251,8 @@
               "1:1",
               "4:3",
               "3:4"
-            ]
+            ],
+            "default": "16:9"
           },
           "duration_seconds": {
             "type": "integer",
@@ -288,7 +291,8 @@
               "1:1",
               "4:3",
               "3:4"
-            ]
+            ],
+            "default": "16:9"
           },
           "duration_seconds": {
             "type": "integer",

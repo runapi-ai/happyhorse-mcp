@@ -1,5 +1,11 @@
 # Changelog
 
+## [v0.2.1](https://github.com/runapi-ai/happyhorse-mcp/releases/tag/v0.2.1) - 2026-10-15
+
+### Changed
+- Declare the 16:9 server default for aspect_ratio on happyhorse text_to_video models.
+
+
 ## [v0.2.0](https://github.com/runapi-ai/happyhorse-mcp/releases/tag/v0.2.0) - 2026-09-30
 
 ### Changed
